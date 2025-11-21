@@ -1,0 +1,67 @@
+/* Advertise.css */
+.advertise-marquee {
+  overflow: hidden;
+  background: #F3F4F6;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  display: flex; /* Flex વાપરવું જરૂરી */
+}
+
+/* Advertise.css માં જૂના .marquee-track અને @keyframes બદલો */
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content; 
+  will-change: transform;
+  
+  /* JavaScript દ્વારા સેટ કરેલ Duration વાપરો */
+  animation: scroll-left var(--scroll-duration) linear infinite; 
+}
+
+@keyframes scroll-left {
+  0% { 
+    transform: translate3d(0, 0, 0); 
+  }
+  /* 3 સેટ રીપીટ છે, એટલે -66.666% સુધી ખસવાથી લૂપ પરફેક્ટ મેચ થશે */
+  100% { 
+    transform: translate3d(-66.6666%, 0, 0); 
+  }
+}
+
+/* બાકીના કોડ (જેમ કે .marquee-item, .code-badge, .separator) એમના એમ જ રાખો. */
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* આનાથી દરેક આઈટમ વચ્ચે ફિક્સ જગ્યા રહેશે */
+.separator {
+  margin: 0 4rem; /* ડાબે અને જમણે જગ્યા */
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+}
+
+.code-badge {
+  background-color: #ffe4e6;
+  color: #e11d48;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  margin: 0 5px;
+}
+
+
+
+/* મોબાઈલ સ્ક્રીન */
+@media (max-width: 768px) {
+  .marquee-track { animation-duration: 25s; } /* મોબાઈલમાં થોડું ફાસ્ટ */
+  .separator { margin: 0 2rem; }
+}
