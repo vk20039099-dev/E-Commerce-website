@@ -3,6 +3,7 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import Banner_right from './Banner_right'
 import Banner_left from './banner_left'
 
+
 const Homebanner = () => {
     return (
         <>

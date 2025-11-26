@@ -9,7 +9,7 @@ const App = () => {
       <div className=' mx-auto   px-5 w-full '>
         <Nav />
       </div>
-     
+
     </div>
   )
 }
