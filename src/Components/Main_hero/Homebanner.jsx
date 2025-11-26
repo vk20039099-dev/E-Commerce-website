@@ -12,7 +12,7 @@ const Homebanner = () => {
                     <div className="left_arrow hidden lg:block">
                         <p className='p-6 bg-pink-200 rounded-full'><FaAngleLeft /></p>
                     </div>
-                    <div className="center_content w-full gap-5 flex justify-between items-center px-15 h-full ">
+                    <div className="center_content w-full gap-5 lg:flex  justify-between items-center px-15 h-full ">
                         <Banner_left />
                         <Banner_right />
                     </div>
