@@ -6,7 +6,7 @@ const Banner_right = () => {
     return (
         <>
 
-            <div className="content-right w-[40%] h-[660px] order-1 lg:order-2 ">
+            <div className="content-right w-[40%] h-[660px] order-2 lg:order-1 ">
                 <img src={banner_img} alt="banner" className='object-cover h-full rounded-md ' />
             </div>
 
