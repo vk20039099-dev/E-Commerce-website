@@ -20,7 +20,7 @@ const Homebanner = () => {
                 {/* Left Arrow - Hidden on mobile, visible from xl */}
                 <button 
                     onClick={prevSlide}
-                    className="hidden xl:flex p-4 lg:p-6 bg-pink-200 hover:bg-pink-300 rounded-full transition-all hover:scale-110 active:scale-95 flex-shrink-0"
+                    className="hidden lg:flex p-4 lg:p-6 bg-pink-200 hover:bg-pink-300 rounded-full transition-all hover:scale-110 active:scale-95 flex-shrink-0"
                     aria-label="Previous slide"
                 >
                     <FaAngleLeft className="text-lg lg:text-xl text-gray-700" />
@@ -35,7 +35,7 @@ const Homebanner = () => {
                 {/* Right Arrow - Hidden on mobile, visible from xl */}
                 <button 
                     onClick={nextSlide}
-                    className="hidden xl:flex p-4 lg:p-6 bg-pink-200 hover:bg-pink-300 rounded-full transition-all hover:scale-110 active:scale-95 flex-shrink-0"
+                    className="hidden lg:flex p-4 lg:p-6 bg-pink-200 hover:bg-pink-300 rounded-full transition-all hover:scale-110 active:scale-95 flex-shrink-0"
                     aria-label="Next slide"
                 >
                     <FaAngleRight className="text-lg lg:text-xl text-gray-700" />

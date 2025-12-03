@@ -119,13 +119,13 @@ const Nav = () => {
 
                 {/* Desktop Icons - Hidden on mobile */}
                 <div className="profile_side hidden lg:flex gap-4 xl:gap-6 text-xl lg:text-2xl text-gray-700 items-center">
-                    <button className='hover:text-red-500 transition-colors' aria-label="Search">
+                    <button className='hover:text-red-500 transition-colors' aria-label="Search" >
                         <CgSearch />
                     </button>
-                    <button className='hover:text-red-500 transition-colors' aria-label="Wishlist">
+                    <button className='hover:text-red-500 transition-colors' aria-label="Wishlist" >
                         <Heart />
                     </button>
-                    <button className="relative hover:text-red-500 transition-colors" aria-label="Cart">
+                    <button className="relative hover:text-red-500 transition-colors" aria-label="Cart" >
                         <MdAddShoppingCart />
                         <span className='bg-red-500 flex items-center justify-center rounded-full w-4 h-4 lg:w-5 lg:h-5 text-xs text-white absolute -top-2 -right-2'>
                             2
@@ -142,7 +142,7 @@ const Nav = () => {
                 {/* Mobile Menu Toggle Button */}
                 <button
                     onClick={() => setOpen(!open)}
-                    className={`text-2xl text-[#0E1F51]  z-50 ${open ? "hidden" : "block"}`}
+                    className={`text-2xl text-[#0E1F51]  z-50 ${!open ? "lg:hidden" : "block "}`}
                     aria-label="Toggle menu"
                 >
                     <FaBars />
@@ -150,13 +150,7 @@ const Nav = () => {
                 {/* Mobile Sidebar Menu */}
                 <div className={`lg:hidden ${open ? "block" : "hidden"}`}>
                     {/* Overlay */}
-                    {open && (
-                        <div
-                            className="fixed inset-0 bg-black bg-opacity-50 z-40"
-                            onClick={() => setOpen(false)}
-                        />
-                    )}
-
+                  
                     {/* Sidebar */}
                     <div
                         className={`fixed top-0 right-0 h-full w-72 sm:w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 ${open ? "translate-x-0" : "translate-x-full"
@@ -164,7 +158,7 @@ const Nav = () => {
                     >
                         <div className="flex flex-col h-full">
                             {/* Close Button */}
-                            <div className="flex justify-end p-6 border-b">
+                            <div className="flex justify-end p-6 border-b-2">
                                 <button
                                     onClick={() => setOpen(!open)}
                                     className="text-2xl text-[#0E1F51] hover:text-red-500 transition-colors"
